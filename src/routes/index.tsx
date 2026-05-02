@@ -6,6 +6,9 @@ import heroImg from "@/assets/hero-kitchen.jpg";
 import flatlayImg from "@/assets/bottle-flatlay.jpg";
 import patternImg from "@/assets/bakery-pattern.jpg";
 import foundersImg from "@/assets/founders.png";
+import doughBlob from "@/assets/dough-blob.png";
+import wheatSprig from "@/assets/wheat-sprig.png";
+import bubbleImg from "@/assets/bubble.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -71,18 +74,26 @@ function Index() {
 
       {/* Why */}
       <section
-        className="relative bg-primary text-primary-foreground"
+        className="relative overflow-hidden text-primary-foreground"
         style={{
-          backgroundImage: `linear-gradient(oklch(0.42 0.06 55 / 0.94), oklch(0.42 0.06 55 / 0.94)), url(${patternImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background:
+            "radial-gradient(ellipse at top left, oklch(0.78 0.14 75) 0%, transparent 55%), radial-gradient(ellipse at bottom right, oklch(0.72 0.16 60) 0%, transparent 60%), linear-gradient(135deg, oklch(0.5 0.09 55), oklch(0.46 0.08 60))",
         }}
       >
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
-          <div className="text-xs tracking-[0.22em] uppercase font-semibold opacity-70">Why Dissolve My Dough</div>
+        {/* Floating bakery doodles */}
+        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-6 -left-4 w-20 md:w-28 opacity-80 animate-drift-a" />
+        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 right-2 w-16 md:w-24 opacity-90 animate-drift-b" />
+        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-6 left-4 w-14 md:w-20 opacity-70 animate-drift-c" />
+        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -bottom-4 -right-4 w-20 md:w-28 opacity-80 animate-drift-a" />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/3 left-8 w-10 md:w-14 animate-bubble-rise" style={{ animationDelay: "0s" }} />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/2 right-12 w-8 md:w-12 animate-bubble-rise" style={{ animationDelay: "2s" }} />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-20 left-1/3 w-6 md:w-10 animate-bubble-rise" style={{ animationDelay: "4s" }} />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
+          <div className="text-xs tracking-[0.22em] uppercase font-semibold opacity-80">Why Dissolve My Dough</div>
           <h2 className="mt-4 text-3xl md:text-5xl font-serif leading-tight">
             Tough on dough. <br className="sm:hidden" />
-            <em className="font-hand text-accent text-4xl md:text-6xl">Gentle</em> on hands.
+            <em className="font-hand text-accent-foreground text-4xl md:text-6xl">Gentle</em> on hands.
           </h2>
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
             {[
@@ -99,9 +110,9 @@ function Index() {
                 d: "Mixed by hand in Oakland, California. Labeled with the date it was made and what's inside.",
               },
             ].map((s) => (
-              <div key={s.t} className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-6 backdrop-blur">
+              <div key={s.t} className="bg-primary-foreground/10 border border-primary-foreground/15 rounded-2xl p-6 backdrop-blur-md">
                 <div className="font-serif text-2xl mb-2">{s.t}</div>
-                <p className="text-sm opacity-80 leading-relaxed">{s.d}</p>
+                <p className="text-sm opacity-90 leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
