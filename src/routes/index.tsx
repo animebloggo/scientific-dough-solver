@@ -6,6 +6,9 @@ import heroImg from "@/assets/hero-kitchen.jpg";
 import flatlayImg from "@/assets/bottle-flatlay.jpg";
 import patternImg from "@/assets/bakery-pattern.jpg";
 import foundersImg from "@/assets/founders.png";
+import doughBlob from "@/assets/dough-blob.png";
+import wheatSprig from "@/assets/wheat-sprig.png";
+import bubbleImg from "@/assets/bubble.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
