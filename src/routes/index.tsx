@@ -131,7 +131,7 @@ function Index() {
       <section className="bg-cream border-y border-border overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           <div className="text-center mb-12">
-            <div className="font-hand text-accent text-3xl md:text-4xl">meet the founders</div>
+            <div className="font-hand text-accent text-3xl md:text-4xl">meet</div>
             <h2 className="mt-2 text-4xl md:text-5xl font-serif text-primary">
               Kay <span className="font-hand text-accent">&</span> Kayla
             </h2>
