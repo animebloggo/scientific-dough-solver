@@ -15,7 +15,7 @@ function Index() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-background">
-        <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center py-[40px]">
           <div>
             <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium">
               <Award className="w-3.5 h-3.5 text-accent" />
