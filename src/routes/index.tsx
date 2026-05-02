@@ -108,8 +108,8 @@ function Index() {
       </section>
 
       {/* Products */}
-      <section className="paper-texture border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+      <section className="paper-texture">
+        <div className="max-w-7xl mx-auto px-6 pt-24 pb-10">
           <div className="text-center mb-12">
             <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">The shelf</div>
             <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
