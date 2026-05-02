@@ -81,7 +81,8 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
           <div className="text-xs tracking-[0.22em] uppercase font-semibold opacity-70">Why Dissolve My Dough</div>
           <h2 className="mt-4 text-4xl md:text-5xl font-serif">
-            Cleaning that's actually <em className="font-hand text-accent text-5xl md:text-6xl">kind</em> to your kitchen.
+            Tough on sticky dough. <br />
+            <em className="font-hand text-accent text-5xl md:text-6xl">Gentle</em> on your hands.
           </h2>
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
             {[
