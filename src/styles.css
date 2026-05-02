@@ -159,5 +159,26 @@
   .animate-float-slow-alt { animation: float-slow-alt 7s ease-in-out infinite; }
   .animate-tag-pop { animation: tag-pop 0.8s ease-out 0.4s both; }
   .animate-tag-pop-right { animation: tag-pop-right 0.8s ease-out 0.7s both; }
+  @keyframes drift-a {
+    0%, 100% { transform: translate(0,0) rotate(-6deg); }
+    50% { transform: translate(8px,-12px) rotate(2deg); }
+  }
+  @keyframes drift-b {
+    0%, 100% { transform: translate(0,0) rotate(8deg); }
+    50% { transform: translate(-10px,-8px) rotate(-3deg); }
+  }
+  @keyframes drift-c {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    50% { transform: translate(6px,10px) rotate(6deg); }
+  }
+  @keyframes bubble-rise {
+    0% { transform: translateY(20px) scale(0.9); opacity: 0.45; }
+    50% { opacity: 0.85; }
+    100% { transform: translateY(-30px) scale(1.05); opacity: 0.35; }
+  }
+  .animate-drift-a { animation: drift-a 9s ease-in-out infinite; }
+  .animate-drift-b { animation: drift-b 11s ease-in-out infinite; }
+  .animate-drift-c { animation: drift-c 8s ease-in-out infinite; }
+  .animate-bubble-rise { animation: bubble-rise 7s ease-in-out infinite; }
 }
 
