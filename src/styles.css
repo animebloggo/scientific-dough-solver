@@ -139,4 +139,25 @@
     background-size: 32px 32px, 48px 48px;
     background-position: 0 0, 16px 16px;
   }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+  }
+  @keyframes float-slow-alt {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-14px) rotate(1deg); }
+  }
+  @keyframes tag-pop {
+    0% { opacity: 0; transform: translateY(8px) rotate(-6deg) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) rotate(-6deg) scale(1); }
+  }
+  @keyframes tag-pop-right {
+    0% { opacity: 0; transform: translateY(8px) rotate(5deg) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) rotate(5deg) scale(1); }
+  }
+  .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+  .animate-float-slow-alt { animation: float-slow-alt 7s ease-in-out infinite; }
+  .animate-tag-pop { animation: tag-pop 0.8s ease-out 0.4s both; }
+  .animate-tag-pop-right { animation: tag-pop-right 0.8s ease-out 0.7s both; }
 }
+
