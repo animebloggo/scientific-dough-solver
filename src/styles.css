@@ -36,7 +36,8 @@
   --color-cream: var(--cream);
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Fraunces', Georgia, serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'Inter', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
 }
 
 :root {
