@@ -128,10 +128,10 @@ function Index() {
       </section>
 
       {/* Meet the Founders */}
-      <section className="bg-cream border-y border-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+      <section className="bg-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 pt-6 pb-20 md:pt-10 md:pb-28">
           <div className="text-center mb-12">
-            <div className="font-hand text-accent text-3xl md:text-4xl">meet</div>
+            <div className="font-hand text-accent text-5xl md:text-7xl leading-none">meet</div>
             <h2 className="mt-2 text-4xl md:text-5xl font-serif text-primary">
               Kay <span className="font-hand text-accent">&</span> Kayla
             </h2>
