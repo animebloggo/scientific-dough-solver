@@ -192,10 +192,10 @@ function Index() {
                 afternoons scrubbing sourdough off our favorite bowls.
               </p>
               <p className="mt-4 text-foreground/75 leading-relaxed">
-                Every bottle is mixed, labeled, and signed off by us — the same way we'd want it
+                Every bottle is mixed, labeled, and signed off by us, the same way we'd want it
                 if it were headed to our own counters.
               </p>
-              <div className="mt-6 font-hand text-accent text-2xl">— Kay &amp; Kayla</div>
+              <div className="mt-6 font-hand text-accent text-2xl">xx Kay &amp; Kayla</div>
             </div>
           </div>
         </div>
