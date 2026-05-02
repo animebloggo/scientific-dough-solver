@@ -195,7 +195,7 @@ function Index() {
                 Every bottle is mixed, labeled, and signed off by us, the same way we'd want it
                 if it were headed to our own counters.
               </p>
-              <div className="mt-6 font-hand text-accent text-2xl">xx Kay &amp; Kayla</div>
+              <div className="mt-6 font-hand text-accent text-2xl">love, Kay &amp; Kayla</div>
             </div>
           </div>
         </div>
