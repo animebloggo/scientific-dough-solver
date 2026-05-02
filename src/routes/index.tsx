@@ -108,8 +108,8 @@ function Index() {
       </section>
 
       {/* Products */}
-      <section className="paper-texture border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-24">
+      <section className="paper-texture">
+        <div className="max-w-7xl mx-auto px-6 pt-24 pb-10">
           <div className="text-center mb-12">
             <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">The shelf</div>
             <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
@@ -128,10 +128,10 @@ function Index() {
       </section>
 
       {/* Meet the Founders */}
-      <section className="bg-cream border-y border-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+      <section className="bg-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 pt-6 pb-20 md:pt-10 md:pb-28">
           <div className="text-center mb-12">
-            <div className="font-hand text-accent text-3xl md:text-4xl">meet</div>
+            <div className="font-hand text-accent text-5xl md:text-7xl leading-none">meet</div>
             <h2 className="mt-2 text-4xl md:text-5xl font-serif text-primary">
               Kay <span className="font-hand text-accent">&</span> Kayla
             </h2>
