@@ -192,11 +192,69 @@ function Index() {
                 afternoons scrubbing sourdough off our favorite bowls.
               </p>
               <p className="mt-4 text-foreground/75 leading-relaxed">
-                Every bottle is mixed, labeled, and signed off by us — the same way we'd want it
+                Every bottle is mixed, labeled, and signed off by us, the same way we'd want it
                 if it were headed to our own counters.
               </p>
-              <div className="mt-6 font-hand text-accent text-2xl">— Kay &amp; Kayla</div>
+              <div className="mt-6 font-hand text-accent text-2xl">love, Kay &amp; Kayla</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="bg-cream/60 paper-texture">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <div className="text-center mb-12">
+            <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">Kind words</div>
+            <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
+              From other <span className="font-hand text-accent">bakers.</span>
+            </h2>
+            <div className="mt-4 inline-flex items-center gap-2 text-sm text-foreground/70">
+              <span className="font-serif text-2xl text-primary">4.9</span>
+              <span className="text-accent text-lg tracking-tight">★★★★★</span>
+              <span className="text-foreground/50">·</span>
+              <span>237 honest reviews</span>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: "Pumped a little into a bowl crusted with two-day-old sourdough, walked away, came back, rinsed. That was it.",
+                name: "Maren P.",
+                tag: "home baker · Portland",
+                product: "1-pack",
+              },
+              {
+                quote: "I run a tiny cottage bakery and my hands feel like hands again. Cleanup time on dough hooks went from forever to a quick warm rinse.",
+                name: "Jules R.",
+                tag: "cottage baker · Austin",
+                product: "2-pack",
+              },
+              {
+                quote: "Skeptical at first, but the proofing tubs that used to need scraping just slid clean. The bottle even came with a little handwritten note, which was a nice touch.",
+                name: "Theo K.",
+                tag: "weekend sourdough person",
+                product: "2-pack",
+              },
+            ].map((r) => (
+              <div
+                key={r.name}
+                className="bg-card border border-border/60 rounded-2xl p-7 shadow-[var(--shadow-card)] flex flex-col"
+              >
+                <div className="text-accent text-lg tracking-tight mb-3">★★★★★</div>
+                <p className="text-foreground/80 leading-relaxed flex-1">
+                  &ldquo;{r.quote}&rdquo;
+                </p>
+                <div className="mt-6 pt-4 border-t border-border/50">
+                  <div className="font-serif text-primary text-lg leading-tight">{r.name}</div>
+                  <div className="text-xs text-foreground/60 mt-1">{r.tag}</div>
+                  <div className="text-[11px] tracking-widest uppercase text-kraft mt-2">
+                    Review · Dissolve My Dough {r.product}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
