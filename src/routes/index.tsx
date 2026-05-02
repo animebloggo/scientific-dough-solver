@@ -106,6 +106,26 @@ function Index() {
         </div>
       </section>
 
+      {/* Products */}
+      <section className="paper-texture border-y border-border">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="text-center mb-12">
+            <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">The shelf</div>
+            <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
+              Pick what fits your <span className="font-hand text-accent">kitchen.</span>
+            </h2>
+          </div>
+          <ProductGrid limit={6} />
+          <div className="text-center mt-12">
+            <Link to="/shop">
+              <Button variant="outline" className="rounded-full border-primary/30 h-11 px-6">
+                View all <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Mechanism — story style */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -153,26 +173,6 @@ function Index() {
             </ol>
             <Link to="/science" className="inline-flex items-center mt-8 text-accent font-medium hover:underline">
               Read the full breakdown <ArrowRight className="ml-1 w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Products */}
-      <section className="paper-texture border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <div className="text-center mb-12">
-            <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">The shelf</div>
-            <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
-              Pick what fits your <span className="font-hand text-accent">kitchen.</span>
-            </h2>
-          </div>
-          <ProductGrid limit={6} />
-          <div className="text-center mt-12">
-            <Link to="/shop">
-              <Button variant="outline" className="rounded-full border-primary/30 h-11 px-6">
-                View all <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
             </Link>
           </div>
         </div>
