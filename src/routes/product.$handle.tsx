@@ -107,8 +107,8 @@ function ProductPage() {
 
         {/* Info */}
         <div>
-          <div className="label-mono">Formulation · Patent Pending</div>
-          <h1 className="mt-2 text-4xl md:text-5xl font-serif">{product.title}</h1>
+          <div className="font-hand text-accent text-2xl">made by hand · Oakland</div>
+          <h1 className="mt-1 text-4xl md:text-5xl font-serif text-primary">{product.title}</h1>
           <div className="mt-4 text-2xl font-mono">
             {selected ? `${selected.price.currencyCode} ${parseFloat(selected.price.amount).toFixed(2)}` : "—"}
           </div>
@@ -149,9 +149,9 @@ function ProductPage() {
 
           <div className="mt-10 border-t border-border pt-6 grid grid-cols-3 gap-4">
             {[
-              { i: ShieldCheck, t: "Non-toxic" },
+              { i: ShieldCheck, t: "Safe & non-toxic" },
               { i: Truck, t: "Free US shipping $35+" },
-              { i: FlaskConical, t: "Lab certified" },
+              { i: FlaskConical, t: "Plant-based" },
             ].map((b) => (
               <div key={b.t} className="text-center">
                 <b.i className="w-5 h-5 mx-auto text-accent" />
