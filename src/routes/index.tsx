@@ -19,32 +19,32 @@ function Index() {
           <div>
             <div className="inline-flex items-center gap-2 label-mono bg-card border border-border rounded-full px-3 py-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              Patent-Pending Enzyme Formulation
+              Made by people who actually bake
             </div>
             <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.02]">
-              The molecular<br />solution to <em className="text-accent not-italic font-serif">stuck dough.</em>
+              Dough doesn't have to be<br /><em className="text-accent not-italic font-serif">a fight.</em>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
-              A precisely calibrated blend of α-amylase, protease, and lipase enzymes
-              that hydrolyze the polysaccharide and protein bonds holding dough to your surfaces.
-              No scrubbing. No harsh chemicals. Just chemistry.
+              A gentle, food-safe blend of enzymes that quietly loosens starch and gluten
+              from your bowls, boards, and sink. Simple enough for home kitchens.
+              Smart enough for people who care how things work.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/shop">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-base h-12 px-7">
-                  Shop the Formula <ArrowRight className="ml-2 w-4 h-4" />
+                  Try a bottle <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
               <Link to="/science">
                 <Button size="lg" variant="outline" className="border-primary/30 text-base h-12 px-7">
-                  See How It Works
+                  How it works
                 </Button>
               </Link>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-4 max-w-md">
               {[
-                { v: "99.4%", l: "Dough Dissolution" },
-                { v: "<60s", l: "Reaction Time" },
+                { v: "99.4%", l: "Residue Removed" },
+                { v: "<60s", l: "Average Soak" },
                 { v: "100%", l: "Biodegradable" },
               ].map((s) => (
                 <div key={s.l}>
@@ -64,9 +64,9 @@ function Index() {
               height={1200}
             />
             <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-lg p-4 shadow-[var(--shadow-card)] hidden md:block">
-              <div className="label-mono">Test Specimen 0042</div>
-              <div className="font-mono text-sm mt-1">pH 7.2 · 22°C · t=43s</div>
-              <div className="text-xs text-accent mt-1 font-medium">✓ Complete dissolution</div>
+              <div className="label-mono">Kitchen test · batch 042</div>
+              <div className="font-mono text-sm mt-1">pH 7.2 · room temp · 43s</div>
+              <div className="text-xs text-accent mt-1 font-medium">✓ Wiped clean, no scrubbing</div>
             </div>
           </div>
         </div>
@@ -103,29 +103,28 @@ function Index() {
             />
           </div>
           <div>
-            <div className="label-mono">§ 02 · The Mechanism</div>
-            <h2 className="mt-3 text-4xl md:text-5xl font-serif">How enzymes break the bonds.</h2>
+            <div className="label-mono">§ 02 · How it works</div>
+            <h2 className="mt-3 text-4xl md:text-5xl font-serif">A quieter way to clean.</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Dough adheres because gluten proteins form an elastic network and starch
-              granules act as a viscous binder. Conventional cleaners attack the surface.
-              We attack the structure.
+              Dough sticks because gluten forms a stretchy web and starch turns tacky in water.
+              Most cleaners try to push through it. Ours gently takes it apart, so it can rinse away on its own.
             </p>
             <ol className="mt-8 space-y-6">
               {[
                 {
                   n: "01",
-                  t: "α-Amylase locates starch",
-                  d: "Cleaves α-1,4 glycosidic bonds in amylose & amylopectin chains.",
+                  t: "Enzymes find the starch",
+                  d: "α-amylase loosens the long starch chains that make dough cling.",
                 },
                 {
                   n: "02",
-                  t: "Protease unwinds gluten",
-                  d: "Hydrolyzes peptide bonds in glutenin and gliadin networks.",
+                  t: "Gluten softens",
+                  d: "A food-grade protease relaxes the gluten network without harsh chemistry.",
                 },
                 {
                   n: "03",
-                  t: "Surfactants lift residue",
-                  d: "Plant-derived surfactants encapsulate the dissolved fragments for rinse-off.",
+                  t: "Everything rinses away",
+                  d: "Plant-based surfactants lift the loosened bits so warm water carries them off.",
                 },
               ].map((s) => (
                 <li key={s.n} className="flex gap-5">
@@ -138,7 +137,7 @@ function Index() {
               ))}
             </ol>
             <Link to="/science" className="inline-flex items-center mt-8 text-accent font-medium hover:underline">
-              Read the full white paper <ArrowRight className="ml-1 w-4 h-4" />
+              Read the full breakdown <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -149,8 +148,8 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
-              <div className="label-mono">§ 03 · Catalogue</div>
-              <h2 className="mt-3 text-4xl md:text-5xl font-serif">Available formulations.</h2>
+              <div className="label-mono">§ 03 · The shelf</div>
+              <h2 className="mt-3 text-4xl md:text-5xl font-serif">Pick what fits your kitchen.</h2>
             </div>
             <Link to="/shop">
               <Button variant="outline" className="border-primary/30">View all <ArrowRight className="ml-2 w-4 h-4" /></Button>
@@ -163,13 +162,13 @@ function Index() {
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 py-24 text-center">
         <Beaker className="w-10 h-10 mx-auto text-accent" />
-        <h2 className="mt-6 text-4xl md:text-5xl font-serif">Engineered, not improvised.</h2>
+        <h2 className="mt-6 text-4xl md:text-5xl font-serif">Quietly considered. Honestly made.</h2>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-          Every bottle ships with a certificate of analysis. Every batch is tested for
-          enzymatic activity, pH stability, and biodegradability.
+          We test every batch for activity, pH, and shelf life — and write down what we find.
+          If you want the numbers, just ask. We'll send them.
         </p>
         <Link to="/shop">
-          <Button size="lg" className="mt-8 h-12 px-8">Order yours</Button>
+          <Button size="lg" className="mt-8 h-12 px-8">Try a bottle</Button>
         </Link>
       </section>
     </>

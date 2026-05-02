@@ -12,7 +12,7 @@ export function Header() {
           </div>
           <div className="leading-none">
             <div className="font-serif font-semibold text-lg tracking-tight">Dissolve My Dough</div>
-            <div className="label-mono text-[0.6rem] mt-0.5">Enzymatic Cleaning Lab</div>
+            <div className="label-mono text-[0.6rem] mt-0.5">Gentle enzyme cleaner</div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">

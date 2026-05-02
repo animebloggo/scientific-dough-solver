@@ -16,32 +16,29 @@ function About() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-20 md:py-28">
       <div className="label-mono">About</div>
-      <h1 className="mt-3 text-5xl md:text-6xl font-serif leading-tight">Built by chemists who bake.</h1>
+      <h1 className="mt-3 text-5xl md:text-6xl font-serif leading-tight">A small studio of bakers and a chemist.</h1>
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
         <p>
-          Dissolve My Dough began in a home kitchen and a university bench. After
-          one too many ruined sponges and clogged drains, our founders — a food
-          chemist and a sourdough obsessive — set out to design a cleaner that
-          worked <em>with</em> the chemistry of dough rather than against it.
+          We started this because cleaning up after a bake had quietly become the worst part of baking.
+          A food chemist and a sourdough-obsessed friend sat down at a kitchen table and asked a
+          simple question: what if the cleaner understood the dough?
         </p>
         <p>
-          The result is a stabilized enzyme blend that is gentle on hands and
-          surfaces yet ruthless on starch and gluten residues. Every batch is
-          analyzed for enzymatic activity, pH, and microbial cleanliness before
-          it leaves our facility in California.
+          What came out is gentle on your hands, kind to your sink, and honest about what it does.
+          Each batch is mixed in small runs and checked the same way every time — for activity,
+          pH, and shelf life — before it gets a label.
         </p>
         <p>
-          We believe cleaning products should be transparent about what's inside.
-          Our full formulation, safety data, and biodegradability test results
-          are available on request — because real expertise has nothing to hide.
+          We try to be straightforward. If you want to know what's in the bottle, where it's made,
+          or how we tested it, just ask. We'll tell you, in plain language.
         </p>
       </div>
 
       <div className="mt-16 grid sm:grid-cols-3 gap-6 border-t border-border pt-10">
         {[
-          { l: "Founded", v: "2024" },
-          { l: "Headquartered", v: "Oakland, CA" },
-          { l: "Certifications", v: "Leaping Bunny · USDA BioPreferred" },
+          { l: "Started", v: "2024" },
+          { l: "Made in", v: "Oakland, CA" },
+          { l: "Kind to", v: "Hands · Pipes · Animals" },
         ].map((b) => (
           <div key={b.l}>
             <div className="label-mono">{b.l}</div>
