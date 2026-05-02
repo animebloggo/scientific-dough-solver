@@ -20,7 +20,7 @@ function Index() {
           <div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.02] text-primary">
               The soap that <br />
-              <span className="font-hand text-accent text-6xl md:text-7xl lg:text-8xl font-normal">loosens dough.</span>
+              <span className="font-hand text-accent text-6xl md:text-7xl lg:text-8xl font-normal">Dissolves dough.</span>
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-lg leading-relaxed">
               A gentle blend of plant enzymes that takes sticky dough off bowls, boards,
