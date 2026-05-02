@@ -27,8 +27,8 @@ export function ProductGrid({ limit = 12 }: Props) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {products.map((p, idx) => {
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.map((p) => {
         const node = p.node;
         const img = node.images.edges[0]?.node;
         const price = node.priceRange.minVariantPrice;
@@ -37,9 +37,9 @@ export function ProductGrid({ limit = 12 }: Props) {
             key={node.id}
             to="/product/$handle"
             params={{ handle: node.handle }}
-            className="group block bg-card border border-border rounded-lg overflow-hidden hover:shadow-[var(--shadow-elevated)] transition-all duration-500 hover:-translate-y-1"
+            className="group block bg-card border border-border rounded-2xl overflow-hidden hover:shadow-[var(--shadow-elevated)] transition-all duration-500 hover:-translate-y-1"
           >
-            <div className="relative aspect-square bg-secondary overflow-hidden">
+            <div className="relative aspect-square bg-cream overflow-hidden">
               {img ? (
                 <img
                   src={img.url}
@@ -50,21 +50,15 @@ export function ProductGrid({ limit = 12 }: Props) {
               ) : (
                 <div className="w-full h-full grid-bg" />
               )}
-              <div className="absolute top-3 left-3 label-mono bg-background/80 backdrop-blur px-2 py-1 rounded">
-                Spec. {String(idx + 1).padStart(3, "0")}
-              </div>
             </div>
-            <div className="p-5">
-              <h3 className="font-serif text-xl tracking-tight">{node.title}</h3>
-              <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{node.description}</p>
-              <div className="flex items-center justify-between mt-4">
-                <div className="font-mono text-lg">
-                  {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
-                </div>
-                <Button variant="ghost" size="sm" className="text-accent hover:text-accent">
-                  View →
-                </Button>
+            <div className="p-6 text-center">
+              <h3 className="font-serif text-xl tracking-tight text-primary">{node.title}</h3>
+              <div className="mt-2 text-foreground/70">
+                {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
               </div>
+              <Button variant="outline" size="sm" className="mt-4 rounded-full border-primary/30">
+                Shop now
+              </Button>
             </div>
           </Link>
         );
