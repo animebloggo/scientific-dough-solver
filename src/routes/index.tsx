@@ -43,7 +43,7 @@ function Index() {
               </Link>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative hidden lg:block">
             <img
               src={heroImg}
               alt="Hands using artisan dough cleaner in a sunlit kitchen"
