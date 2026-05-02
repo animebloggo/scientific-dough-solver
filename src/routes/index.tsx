@@ -127,7 +127,62 @@ function Index() {
         </div>
       </section>
 
-      {/* Mechanism — story style */}
+      {/* Meet the Founders */}
+      <section className="bg-cream border-y border-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+          <div className="text-center mb-12">
+            <div className="font-hand text-accent text-3xl md:text-4xl">meet the founders</div>
+            <h2 className="mt-2 text-4xl md:text-5xl font-serif text-primary">
+              Kay <span className="font-hand text-accent">&</span> Kayla
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative order-1 lg:order-1">
+              <div
+                className="absolute inset-0 -z-0 rounded-full mx-auto my-auto blur-3xl opacity-60"
+                style={{
+                  background: "radial-gradient(circle, oklch(0.78 0.13 75 / 0.45), transparent 65%)",
+                }}
+              />
+              <div className="relative">
+                <img
+                  src={foundersImg}
+                  alt="Kay and Kayla, founders of Dissolve My Dough, holding fresh sourdough loaves"
+                  className="relative w-full max-w-xl mx-auto animate-float-slow"
+                  loading="lazy"
+                />
+                <div className="absolute top-[18%] left-[2%] md:left-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop">
+                  <span className="font-hand text-accent text-base mr-1">Kay</span>
+                  <span className="text-foreground/70">· baker</span>
+                </div>
+                <div className="absolute top-[14%] right-[2%] md:right-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop-right">
+                  <span className="font-hand text-accent text-base mr-1">Kayla</span>
+                  <span className="text-foreground/70">· chemist</span>
+                </div>
+                <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 bg-cream border border-border rounded-lg px-4 py-2 shadow-[var(--shadow-card)] -rotate-2 animate-float-slow-alt">
+                  <div className="font-hand text-accent text-lg leading-none">made with care</div>
+                  <div className="text-[10px] text-foreground/60 tracking-widest uppercase mt-0.5">Oakland, CA</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-2 lg:order-2">
+              <p className="text-lg text-foreground/75 leading-relaxed">
+                Two friends, two stand mixers, and a whole lot of stuck dough.
+                We started Dissolve My Dough in a small Oakland kitchen after one too many
+                afternoons scrubbing sourdough off our favorite bowls.
+              </p>
+              <p className="mt-4 text-foreground/75 leading-relaxed">
+                Every bottle is mixed, labeled, and signed off by us — the same way we'd want it
+                if it were headed to our own counters.
+              </p>
+              <div className="mt-6 font-hand text-accent text-2xl">— Kay &amp; Kayla</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -175,57 +230,6 @@ function Index() {
             <Link to="/science" className="inline-flex items-center mt-8 text-accent font-medium hover:underline">
               Read the full breakdown <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Meet the Founders */}
-      <section className="bg-cream border-y border-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">Meet the founders</div>
-            <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
-              Kay <span className="font-hand text-accent">&</span> Kayla
-            </h2>
-            <p className="mt-5 text-foreground/75 leading-relaxed">
-              Two friends, two stand mixers, and a whole lot of stuck dough.
-              We started Dissolve My Dough in a small Oakland kitchen after one too many
-              afternoons scrubbing sourdough off our favorite bowls.
-            </p>
-            <p className="mt-4 text-foreground/75 leading-relaxed">
-              Every bottle is mixed, labeled, and signed off by us — the same way we'd want it
-              if it were headed to our own counters.
-            </p>
-            <div className="mt-6 font-hand text-accent text-2xl">— Kay &amp; Kayla</div>
-          </div>
-
-          <div className="order-1 lg:order-2 relative">
-            <div
-              className="absolute inset-0 -z-0 rounded-full mx-auto my-auto blur-3xl opacity-60"
-              style={{
-                background: "radial-gradient(circle, oklch(0.78 0.13 75 / 0.45), transparent 65%)",
-              }}
-            />
-            <div className="relative">
-              <img
-                src={foundersImg}
-                alt="Kay and Kayla, founders of Dissolve My Dough, holding fresh sourdough loaves"
-                className="relative w-full max-w-xl mx-auto animate-float-slow"
-                loading="lazy"
-              />
-              <div className="absolute top-[18%] left-[2%] md:left-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop">
-                <span className="font-hand text-accent text-base mr-1">Kay</span>
-                <span className="text-foreground/70">· baker</span>
-              </div>
-              <div className="absolute top-[14%] right-[2%] md:right-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop-right">
-                <span className="font-hand text-accent text-base mr-1">Kayla</span>
-                <span className="text-foreground/70">· chemist</span>
-              </div>
-              <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 bg-cream border border-border rounded-lg px-4 py-2 shadow-[var(--shadow-card)] -rotate-2 animate-float-slow-alt">
-                <div className="font-hand text-accent text-lg leading-none">made with care</div>
-                <div className="text-[10px] text-foreground/60 tracking-widest uppercase mt-0.5">Oakland, CA</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
