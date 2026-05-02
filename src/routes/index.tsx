@@ -15,13 +15,9 @@ function Index() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-background">
-        <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center py-[40px]">
+        <div className="relative max-w-7xl mx-auto px-6 pt-8 pb-10 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium">
-              <Award className="w-3.5 h-3.5 text-accent" />
-              Made by people who actually bake
-            </div>
-            <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.02] text-primary">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.02] text-primary">
               The soap that <br />
               <span className="font-hand text-accent text-6xl md:text-7xl lg:text-8xl font-normal">loosens dough.</span>
             </h1>
