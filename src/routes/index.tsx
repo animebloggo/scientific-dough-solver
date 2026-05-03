@@ -77,10 +77,9 @@ function Index() {
         <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-20 left-1/3 w-6 md:w-10 opacity-70 animate-bubble-rise" style={{ animationDelay: "4s" }} />
 
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
-          <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">Why Dissolve My Dough</div>
-          <h2 className="mt-4 text-3xl md:text-5xl font-serif leading-tight text-primary">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-tight text-primary">
             Tough on dough. <br className="sm:hidden" />
-            <em className="font-hand text-accent text-4xl md:text-6xl">Gentle</em> on hands.
+            <em className="font-hand text-accent text-5xl md:text-7xl lg:text-8xl">Gentle</em> on hands.
           </h2>
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
             {[
