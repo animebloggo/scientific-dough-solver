@@ -102,10 +102,8 @@ function Index() {
             ))}
           </div>
         </div>
-        {/* Bottom wave divider — matches paper-texture (cream) below */}
-        <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mt-px text-cream" viewBox="0 0 1200 60" preserveAspectRatio="none">
-          <path fill="currentColor" d="M0,60 L1200,60 L1200,30 C1000,0 800,50 600,30 C400,10 200,55 0,25 Z" />
-        </svg>
+        {/* Soft fade into the section below */}
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-16 md:h-24 pointer-events-none bg-gradient-to-t from-cream to-transparent" />
       </section>
 
       {/* Products */}
