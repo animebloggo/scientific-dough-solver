@@ -24,9 +24,10 @@ interface CartStore {
   clearCart: () => void;
   syncCart: () => Promise<void>;
   getCheckoutUrl: () => string | null;
+  ensureCheckoutUrl: () => Promise<string | null>;
 }
 
-const CART_QUERY = `query cart($id: ID!) { cart(id: $id) { id totalQuantity } }`;
+const CART_QUERY = `query cart($id: ID!) { cart(id: $id) { id totalQuantity checkoutUrl } }`;
 
 const CART_CREATE_MUTATION = `
   mutation cartCreate($input: CartInput!) {
