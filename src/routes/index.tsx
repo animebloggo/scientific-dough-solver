@@ -55,29 +55,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="bg-cream border-y border-border/60 relative">
-        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
-            {[
-              { icon: Award, t: "Small batch\nmade" },
-              { icon: ShieldCheck, t: "Safe &\nnontoxic" },
-              { icon: Leaf, t: "Plant\nbased" },
-              { icon: Heart, t: "Women\nowned" },
-            ].map((b) => (
-              <div key={b.t} className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-background flex items-center justify-center shadow-[var(--shadow-card)] border border-border/50">
-                  <b.icon className="w-8 h-8 md:w-10 md:h-10 text-kraft" strokeWidth={1.5} />
-                </div>
-                <span className="text-xs md:text-sm font-serif tracking-[0.2em] uppercase text-kraft whitespace-pre-line leading-tight">
-                  {b.t}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why */}
       <section
         className="relative overflow-hidden text-primary-foreground"
@@ -299,6 +276,29 @@ function Index() {
           <p className="mt-6 text-center text-xs text-foreground/50">
             Reviews sourced from Shopify &amp; Trustpilot.
           </p>
+        </div>
+      </section>
+
+      {/* Trust strip */}
+      <section className="bg-cream border-y border-border/60 relative">
+        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+            {[
+              { icon: Award, t: "Small batch\nmade" },
+              { icon: ShieldCheck, t: "Safe &\nnontoxic" },
+              { icon: Leaf, t: "Plant\nbased" },
+              { icon: Heart, t: "Women\nowned" },
+            ].map((b) => (
+              <div key={b.t} className="flex flex-col items-center text-center gap-4">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-background flex items-center justify-center shadow-[var(--shadow-card)] border border-border/50">
+                  <b.icon className="w-8 h-8 md:w-10 md:h-10 text-kraft" strokeWidth={1.5} />
+                </div>
+                <span className="text-xs md:text-sm font-serif tracking-[0.2em] uppercase text-kraft whitespace-pre-line leading-tight">
+                  {b.t}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
