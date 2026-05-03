@@ -63,8 +63,10 @@ function Index() {
             "radial-gradient(ellipse at top left, oklch(0.92 0.07 78) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.9 0.08 68) 0%, transparent 65%), linear-gradient(180deg, oklch(0.93 0.05 78), oklch(0.91 0.06 72))",
         }}
       >
-        {/* Soft fade into the section above */}
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-16 md:h-24 pointer-events-none bg-gradient-to-b from-background to-transparent" />
+        {/* Top wave divider — matches hero (background) above */}
+        <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mb-px text-background" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,0 L1200,0 L1200,30 C1000,60 800,10 600,30 C400,50 200,5 0,35 Z" />
+        </svg>
         {/* Floating bakery doodles — allowed to drift across section edges */}
         <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-10 -left-4 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
         <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 -right-4 w-16 md:w-24 opacity-90 animate-drift-b z-10" />
@@ -102,8 +104,10 @@ function Index() {
             ))}
           </div>
         </div>
-        {/* Soft fade into the section below */}
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-16 md:h-24 pointer-events-none bg-gradient-to-t from-cream to-transparent" />
+        {/* Bottom wave divider — matches paper-texture (cream) below */}
+        <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mt-px text-cream" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,60 L1200,60 L1200,30 C1000,0 800,50 600,30 C400,10 200,55 0,25 Z" />
+        </svg>
       </section>
 
       {/* Products */}
