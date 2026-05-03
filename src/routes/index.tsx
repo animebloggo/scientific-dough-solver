@@ -67,11 +67,11 @@ function Index() {
           <path fill="currentColor" d="M0,0 L1200,0 L1200,30 C1000,60 800,10 600,30 C400,50 200,5 0,35 Z" />
         </svg>
         {/* Floating bakery doodles — allowed to drift across section edges */}
-        <div className="pointer-events-none absolute inset-0 z-20 select-none [clip-path:inset(-96px_0_-96px_0)] md:[clip-path:inset(-128px_0_-128px_0)]">
+        <div className="pointer-events-none absolute inset-0 z-20 select-none [clip-path:inset(-160px_0_-160px_0)] md:[clip-path:inset(-200px_0_-200px_0)]">
           <img src={doughBlob} alt="" aria-hidden="true" className="absolute -top-12 left-1 w-20 opacity-80 animate-drift-a md:-top-16 md:left-6 md:w-28" />
-          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute top-10 right-1 w-16 opacity-90 animate-drift-b md:right-6 md:w-24" />
+          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -top-1 right-8 w-16 opacity-90 animate-drift-b md:-top-4 md:right-12 md:w-24" />
           <img src={doughBlob} alt="" aria-hidden="true" className="absolute bottom-6 left-0 w-14 opacity-70 animate-drift-c md:-left-2 md:w-20" />
-          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -bottom-14 right-1 w-20 opacity-80 animate-drift-a md:-bottom-20 md:right-6 md:w-28" />
+          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -bottom-14 right-8 w-20 opacity-80 animate-drift-a md:-bottom-20 md:right-12 md:w-28" />
           <img src={bubbleImg} alt="" aria-hidden="true" className="absolute top-1/3 left-8 w-10 opacity-70 animate-bubble-rise md:w-14" style={{ animationDelay: "0s" }} />
           <img src={bubbleImg} alt="" aria-hidden="true" className="absolute top-1/2 right-12 w-8 opacity-70 animate-bubble-rise md:w-12" style={{ animationDelay: "2s" }} />
           <img src={bubbleImg} alt="" aria-hidden="true" className="absolute bottom-20 left-1/3 w-6 opacity-70 animate-bubble-rise md:w-10" style={{ animationDelay: "4s" }} />
