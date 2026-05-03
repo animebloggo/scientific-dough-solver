@@ -104,6 +104,10 @@ function Index() {
             ))}
           </div>
         </div>
+        {/* Bottom scalloped divider */}
+        <svg aria-hidden="true" className="block w-full h-6 md:h-10 -mt-px text-background rotate-180" viewBox="0 0 1200 40" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,40 Q60,0 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 T1200,20 L1200,0 L0,0 Z" />
+        </svg>
       </section>
 
       {/* Products */}
