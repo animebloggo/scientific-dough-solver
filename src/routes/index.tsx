@@ -104,9 +104,9 @@ function Index() {
             ))}
           </div>
         </div>
-        {/* Bottom scalloped divider */}
-        <svg aria-hidden="true" className="block w-full h-6 md:h-10 -mt-px text-background rotate-180" viewBox="0 0 1200 40" preserveAspectRatio="none">
-          <path fill="currentColor" d="M0,40 Q60,0 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 T1200,20 L1200,0 L0,0 Z" />
+        {/* Bottom wave divider — matches paper-texture (cream) below */}
+        <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mt-px text-cream" viewBox="0 0 1200 60" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,60 L1200,60 L1200,30 C1000,0 800,50 600,30 C400,10 200,55 0,25 Z" />
         </svg>
       </section>
 
