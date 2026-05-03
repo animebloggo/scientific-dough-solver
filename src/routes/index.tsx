@@ -60,9 +60,13 @@ function Index() {
         className="relative text-primary"
         style={{
           background:
-            "radial-gradient(ellipse at top left, oklch(0.94 0.06 80) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.92 0.07 70) 0%, transparent 65%), linear-gradient(180deg, oklch(0.96 0.025 80), oklch(0.95 0.03 75))",
+            "radial-gradient(ellipse at top left, oklch(0.92 0.07 78) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.9 0.08 68) 0%, transparent 65%), linear-gradient(180deg, oklch(0.93 0.05 78), oklch(0.91 0.06 72))",
         }}
       >
+        {/* Top scalloped divider */}
+        <svg aria-hidden="true" className="block w-full h-6 md:h-10 -mb-px text-background" viewBox="0 0 1200 40" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,40 Q60,0 120,20 T240,20 T360,20 T480,20 T600,20 T720,20 T840,20 T960,20 T1080,20 T1200,20 L1200,0 L0,0 Z" />
+        </svg>
         {/* Floating bakery doodles — allowed to drift across section edges */}
         <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-10 -left-4 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
         <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 -right-4 w-16 md:w-24 opacity-90 animate-drift-b z-10" />
