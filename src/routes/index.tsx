@@ -57,26 +57,26 @@ function Index() {
 
       {/* Why */}
       <section
-        className="relative overflow-hidden text-primary-foreground"
+        className="relative text-primary"
         style={{
           background:
-            "radial-gradient(ellipse at top left, oklch(0.78 0.14 75) 0%, transparent 55%), radial-gradient(ellipse at bottom right, oklch(0.72 0.16 60) 0%, transparent 60%), linear-gradient(135deg, oklch(0.5 0.09 55), oklch(0.46 0.08 60))",
+            "radial-gradient(ellipse at top left, oklch(0.94 0.06 80) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.92 0.07 70) 0%, transparent 65%), linear-gradient(180deg, oklch(0.96 0.025 80), oklch(0.95 0.03 75))",
         }}
       >
-        {/* Floating bakery doodles */}
-        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-6 -left-4 w-20 md:w-28 opacity-80 animate-drift-a" />
-        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 right-2 w-16 md:w-24 opacity-90 animate-drift-b" />
-        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-6 left-4 w-14 md:w-20 opacity-70 animate-drift-c" />
-        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -bottom-4 -right-4 w-20 md:w-28 opacity-80 animate-drift-a" />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/3 left-8 w-10 md:w-14 animate-bubble-rise" style={{ animationDelay: "0s" }} />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/2 right-12 w-8 md:w-12 animate-bubble-rise" style={{ animationDelay: "2s" }} />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-20 left-1/3 w-6 md:w-10 animate-bubble-rise" style={{ animationDelay: "4s" }} />
+        {/* Floating bakery doodles — allowed to drift across section edges */}
+        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-10 -left-4 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
+        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 -right-4 w-16 md:w-24 opacity-90 animate-drift-b z-10" />
+        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-6 -left-6 w-14 md:w-20 opacity-70 animate-drift-c z-10" />
+        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -bottom-10 -right-6 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/3 left-8 w-10 md:w-14 opacity-70 animate-bubble-rise" style={{ animationDelay: "0s" }} />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/2 right-12 w-8 md:w-12 opacity-70 animate-bubble-rise" style={{ animationDelay: "2s" }} />
+        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-20 left-1/3 w-6 md:w-10 opacity-70 animate-bubble-rise" style={{ animationDelay: "4s" }} />
 
         <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
-          <div className="text-xs tracking-[0.22em] uppercase font-semibold opacity-80">Why Dissolve My Dough</div>
-          <h2 className="mt-4 text-3xl md:text-5xl font-serif leading-tight">
+          <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">Why Dissolve My Dough</div>
+          <h2 className="mt-4 text-3xl md:text-5xl font-serif leading-tight text-primary">
             Tough on dough. <br className="sm:hidden" />
-            <em className="font-hand text-accent-foreground text-4xl md:text-6xl">Gentle</em> on hands.
+            <em className="font-hand text-accent text-4xl md:text-6xl">Gentle</em> on hands.
           </h2>
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
             {[
@@ -93,9 +93,9 @@ function Index() {
                 d: "Mixed by hand in Oakland, California. Labeled with the date it was made and what's inside.",
               },
             ].map((s) => (
-              <div key={s.t} className="bg-primary-foreground/10 border border-primary-foreground/15 rounded-2xl p-6 backdrop-blur-md">
-                <div className="font-serif text-2xl mb-2">{s.t}</div>
-                <p className="text-sm opacity-90 leading-relaxed">{s.d}</p>
+              <div key={s.t} className="bg-card/70 border border-border/60 rounded-2xl p-6 backdrop-blur-md shadow-[var(--shadow-card)]">
+                <div className="font-serif text-2xl mb-2 text-primary">{s.t}</div>
+                <p className="text-sm text-foreground/75 leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
