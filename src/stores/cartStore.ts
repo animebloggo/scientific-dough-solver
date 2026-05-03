@@ -210,6 +210,29 @@ export const useCartStore = create<CartStore>()(
       clearCart: () => set({ items: [], cartId: null, checkoutUrl: null }),
       getCheckoutUrl: () => get().checkoutUrl,
 
+      ensureCheckoutUrl: async () => {
+        const { cartId, clearCart } = get();
+        if (!cartId) return null;
+        try {
+          const data = await storefrontApiRequest(CART_QUERY, { id: cartId });
+          if (!data) return get().checkoutUrl;
+          const cart = data?.data?.cart;
+          if (!cart || cart.totalQuantity === 0) {
+            clearCart();
+            return null;
+          }
+          if (cart.checkoutUrl) {
+            const fresh = formatCheckoutUrl(cart.checkoutUrl);
+            set({ checkoutUrl: fresh });
+            return fresh;
+          }
+          return get().checkoutUrl;
+        } catch (e) {
+          console.error("ensureCheckoutUrl failed", e);
+          return get().checkoutUrl;
+        }
+      },
+
       syncCart: async () => {
         const { cartId, isSyncing, clearCart } = get();
         if (!cartId || isSyncing) return;
@@ -218,7 +241,13 @@ export const useCartStore = create<CartStore>()(
           const data = await storefrontApiRequest(CART_QUERY, { id: cartId });
           if (!data) return;
           const cart = data?.data?.cart;
-          if (!cart || cart.totalQuantity === 0) clearCart();
+          if (!cart || cart.totalQuantity === 0) {
+            clearCart();
+            return;
+          }
+          if (cart.checkoutUrl) {
+            set({ checkoutUrl: formatCheckoutUrl(cart.checkoutUrl) });
+          }
         } catch (e) {
           console.error("sync failed", e);
         } finally {
