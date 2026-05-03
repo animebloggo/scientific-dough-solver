@@ -57,8 +57,8 @@ export function ProductGrid({ limit = 12 }: Props) {
                 {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
               </div>
               <Button
-                size="sm"
-                className="mt-4 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all group-hover:-translate-y-0.5"
+                size="lg"
+                className="mt-5 rounded-full px-8 py-6 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all group-hover:-translate-y-0.5"
               >
                 Shop now →
               </Button>
