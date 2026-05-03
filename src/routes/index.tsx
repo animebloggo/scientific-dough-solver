@@ -57,7 +57,7 @@ function Index() {
 
       {/* Why */}
       <section
-        className="relative text-primary"
+        className="relative text-primary overflow-hidden"
         style={{
           background:
             "radial-gradient(ellipse at top left, oklch(0.92 0.07 78) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.9 0.08 68) 0%, transparent 65%), linear-gradient(180deg, oklch(0.93 0.05 78), oklch(0.91 0.06 72))",
