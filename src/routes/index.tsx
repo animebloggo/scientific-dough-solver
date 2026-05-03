@@ -217,45 +217,88 @@ function Index() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "Pumped a little into a bowl crusted with two-day-old sourdough, walked away, came back, rinsed. That was it.",
-                name: "Maren P.",
-                tag: "home baker · Portland",
-                product: "1-pack",
-              },
-              {
-                quote: "I run a tiny cottage bakery and my hands feel like hands again. Cleanup time on dough hooks went from forever to a quick warm rinse.",
-                name: "Jules R.",
-                tag: "cottage baker · Austin",
-                product: "2-pack",
-              },
-              {
-                quote: "Skeptical at first, but the proofing tubs that used to need scraping just slid clean. The bottle even came with a little handwritten note, which was a nice touch.",
-                name: "Theo K.",
-                tag: "weekend sourdough person",
-                product: "2-pack",
-              },
-            ].map((r) => (
-              <div
-                key={r.name}
-                className="bg-card border border-border/60 rounded-2xl p-7 shadow-[var(--shadow-card)] flex flex-col"
-              >
-                <div className="text-accent text-lg tracking-tight mb-3">★★★★★</div>
-                <p className="text-foreground/80 leading-relaxed flex-1">
-                  &ldquo;{r.quote}&rdquo;
-                </p>
-                <div className="mt-6 pt-4 border-t border-border/50">
-                  <div className="font-serif text-primary text-lg leading-tight">{r.name}</div>
-                  <div className="text-xs text-foreground/60 mt-1">{r.tag}</div>
-                  <div className="text-[11px] tracking-widest uppercase text-kraft mt-2">
-                    Review · Dissolve My Dough {r.product}
+          <div className="-mx-6 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-5 pb-4 w-max">
+              {[
+                {
+                  quote: "Pumped a little into a bowl crusted with two-day-old sourdough, walked away, came back, rinsed. That was it.",
+                  name: "Maren P.",
+                  tag: "home baker · Portland",
+                  product: "1-pack",
+                  source: "Shopify",
+                },
+                {
+                  quote: "I run a tiny cottage bakery and my hands feel like hands again. Cleanup time on dough hooks went from forever to a quick warm rinse.",
+                  name: "Jules R.",
+                  tag: "cottage baker · Austin",
+                  product: "2-pack",
+                  source: "Trustpilot",
+                },
+                {
+                  quote: "Skeptical at first, but the proofing tubs that used to need scraping just slid clean. The bottle even came with a little handwritten note, which was a nice touch.",
+                  name: "Theo K.",
+                  tag: "weekend sourdough person",
+                  product: "2-pack",
+                  source: "Shopify",
+                },
+                {
+                  quote: "My banneton liners used to be a nightmare. A quick soak and the dough just lets go. No scraping, no soaking overnight.",
+                  name: "Priya M.",
+                  tag: "home baker · Brooklyn",
+                  product: "1-pack",
+                  source: "Trustpilot",
+                },
+                {
+                  quote: "Bought it for my pizza dough station. Wiping the bench at the end of service is honestly faster than it's ever been.",
+                  name: "Marco D.",
+                  tag: "pizzaiolo · Chicago",
+                  product: "2-pack",
+                  source: "Shopify",
+                },
+                {
+                  quote: "Smells like nothing, which I love. No perfume, no chemical bite, just clean bowls.",
+                  name: "Hana S.",
+                  tag: "weekend baker · Seattle",
+                  product: "1-pack",
+                  source: "Shopify",
+                },
+                {
+                  quote: "I was suspicious of the enzyme thing but it really does just lift the dough. My KitchenAid bowl looks new again.",
+                  name: "Ellis W.",
+                  tag: "home baker · Denver",
+                  product: "1-pack",
+                  source: "Trustpilot",
+                },
+                {
+                  quote: "Tiny bakery, two of us, four mixers. This cut our end-of-day cleanup in half. Worth every penny.",
+                  name: "Sana B.",
+                  tag: "cottage bakery · Oakland",
+                  product: "2-pack",
+                  source: "Shopify",
+                },
+              ].map((r) => (
+                <div
+                  key={r.name}
+                  className="snap-start shrink-0 w-[78vw] sm:w-[360px] bg-card border border-border/60 rounded-2xl p-7 shadow-[var(--shadow-card)] flex flex-col"
+                >
+                  <div className="text-accent text-lg tracking-tight mb-3">★★★★★</div>
+                  <p className="text-foreground/80 leading-relaxed flex-1">
+                    &ldquo;{r.quote}&rdquo;
+                  </p>
+                  <div className="mt-6 pt-4 border-t border-border/50">
+                    <div className="font-serif text-primary text-lg leading-tight">{r.name}</div>
+                    <div className="text-xs text-foreground/60 mt-1">{r.tag}</div>
+                    <div className="text-[11px] tracking-widest uppercase text-kraft mt-2">
+                      via {r.source} · {r.product}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+          <p className="mt-6 text-center text-xs text-foreground/50">
+            Reviews sourced from Shopify &amp; Trustpilot.
+          </p>
         </div>
       </section>
 
