@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/ProductGrid";
 import { Leaf, ShieldCheck, Wheat, Heart, ArrowRight, Award } from "lucide-react";
 import heroImg from "@/assets/hero-kitchen.jpg";
-import flatlayImg from "@/assets/bottle-flatlay.jpg";
 import patternImg from "@/assets/bakery-pattern.jpg";
 import foundersImg from "@/assets/founders.png";
 import doughBlob from "@/assets/dough-blob.png";
