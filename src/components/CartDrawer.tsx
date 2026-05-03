@@ -17,20 +17,6 @@ export const CartDrawer = () => {
   }, [isOpen, syncCart]);
 
   const checkoutUrl = getCheckoutUrl();
-  const handleCheckout = () => {
-    if (checkoutUrl) {
-      // Try opening in new tab; if blocked (iframe/mobile), fall back to top-level navigation
-      const win = window.open(checkoutUrl, "_blank", "noopener,noreferrer");
-      if (!win || win.closed || typeof win.closed === "undefined") {
-        try {
-          window.top!.location.href = checkoutUrl;
-        } catch {
-          window.location.href = checkoutUrl;
-        }
-      }
-      setIsOpen(false);
-    }
-  };
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -112,16 +98,14 @@ export const CartDrawer = () => {
                 {checkoutUrl ? (
                   <a
                     href={checkoutUrl}
-                    target="_blank"
+                    target="_top"
                     rel="noopener noreferrer"
-                    onClick={() => setIsOpen(false)}
                     className="inline-flex items-center justify-center w-full h-11 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 font-medium aria-disabled:pointer-events-none aria-disabled:opacity-50"
-                    aria-disabled={items.length === 0 || isLoading || isSyncing}
                   >
-                    {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : (<><ExternalLink className="w-4 h-4 mr-2" />Secure Checkout</>)}
+                    <ExternalLink className="w-4 h-4 mr-2" />Secure Checkout
                   </a>
                 ) : (
-                  <Button onClick={handleCheckout} className="w-full bg-primary hover:bg-primary/90" size="lg" disabled>
+                  <Button className="w-full bg-primary hover:bg-primary/90" size="lg" disabled>
                     <Loader2 className="w-4 h-4 animate-spin" />
                   </Button>
                 )}
