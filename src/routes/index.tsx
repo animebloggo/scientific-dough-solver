@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/ProductGrid";
 import { Leaf, ShieldCheck, Wheat, Heart, ArrowRight, Award } from "lucide-react";
 import heroImg from "@/assets/hero-kitchen.jpg";
-import flatlayImg from "@/assets/bottle-flatlay.jpg";
 import patternImg from "@/assets/bakery-pattern.jpg";
 import foundersImg from "@/assets/founders.png";
 import doughBlob from "@/assets/dough-blob.png";
@@ -305,57 +304,6 @@ function Index() {
                 </span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <img
-              src={flatlayImg}
-              alt="Amber bottle of dough cleaner with wheat and a wooden spoon"
-              className="rounded-2xl w-full shadow-[var(--shadow-card)]"
-              width={1400}
-              height={1400}
-              loading="lazy"
-            />
-            <div className="absolute -bottom-5 -right-5 bg-card border border-border rounded-xl p-4 shadow-[var(--shadow-card)] hidden md:block max-w-[220px]">
-              <div className="font-hand text-2xl text-accent leading-none">P.S.</div>
-              <div className="text-xs text-foreground/70 mt-1 leading-relaxed">
-                Each bottle ships with a handwritten note from whoever mixed it.
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="text-xs tracking-[0.22em] uppercase font-semibold text-kraft">How it works</div>
-            <h2 className="mt-3 text-4xl md:text-5xl font-serif text-primary">
-              A quieter way to clean.
-            </h2>
-            <p className="mt-5 text-foreground/75 leading-relaxed">
-              Dough sticks because gluten forms a stretchy web and starch turns tacky in water.
-              Most cleaners try to push through it. Ours gently takes it apart, so it can rinse away on its own.
-            </p>
-            <ol className="mt-8 space-y-6">
-              {[
-                { n: "1", t: "Enzymes find the starch", d: "α-amylase loosens the long starch chains that make dough cling." },
-                { n: "2", t: "Gluten softens", d: "A food-grade protease relaxes the gluten network without harsh chemistry." },
-                { n: "3", t: "Everything rinses away", d: "Plant-based surfactants lift the loosened bits so warm water carries them off." },
-              ].map((s) => (
-                <li key={s.n} className="flex gap-5">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent text-accent-foreground font-serif text-lg flex items-center justify-center">
-                    {s.n}
-                  </div>
-                  <div>
-                    <div className="font-serif text-lg text-primary">{s.t}</div>
-                    <div className="text-sm text-foreground/70 mt-1">{s.d}</div>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <Link to="/science" className="inline-flex items-center mt-8 text-accent font-medium hover:underline">
-              Read the full breakdown <ArrowRight className="ml-1 w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
