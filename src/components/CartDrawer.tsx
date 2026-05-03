@@ -16,10 +16,18 @@ export const CartDrawer = () => {
     if (isOpen) syncCart();
   }, [isOpen, syncCart]);
 
+  const checkoutUrl = getCheckoutUrl();
   const handleCheckout = () => {
-    const url = getCheckoutUrl();
-    if (url) {
-      window.open(url, "_blank");
+    if (checkoutUrl) {
+      // Try opening in new tab; if blocked (iframe/mobile), fall back to top-level navigation
+      const win = window.open(checkoutUrl, "_blank", "noopener,noreferrer");
+      if (!win || win.closed || typeof win.closed === "undefined") {
+        try {
+          window.top!.location.href = checkoutUrl;
+        } catch {
+          window.location.href = checkoutUrl;
+        }
+      }
       setIsOpen(false);
     }
   };
