@@ -109,9 +109,22 @@ export const CartDrawer = () => {
                     {currency} {totalPrice.toFixed(2)}
                   </span>
                 </div>
-                <Button onClick={handleCheckout} className="w-full bg-primary hover:bg-primary/90" size="lg" disabled={items.length === 0 || isLoading || isSyncing}>
-                  {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : (<><ExternalLink className="w-4 h-4 mr-2" />Secure Checkout</>)}
-                </Button>
+                {checkoutUrl ? (
+                  <a
+                    href={checkoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="inline-flex items-center justify-center w-full h-11 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 font-medium aria-disabled:pointer-events-none aria-disabled:opacity-50"
+                    aria-disabled={items.length === 0 || isLoading || isSyncing}
+                  >
+                    {isLoading || isSyncing ? <Loader2 className="w-4 h-4 animate-spin" /> : (<><ExternalLink className="w-4 h-4 mr-2" />Secure Checkout</>)}
+                  </a>
+                ) : (
+                  <Button onClick={handleCheckout} className="w-full bg-primary hover:bg-primary/90" size="lg" disabled>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  </Button>
+                )}
                 <p className="text-xs text-center text-muted-foreground font-mono">SSL encrypted · Powered by Shopify</p>
               </div>
             </>
