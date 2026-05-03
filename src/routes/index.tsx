@@ -154,11 +154,11 @@ function Index() {
                   className="relative w-full max-w-xl mx-auto animate-float-slow"
                   loading="lazy"
                 />
-                <div className="absolute top-[18%] left-[2%] md:left-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop">
+                <div className="absolute top-[6%] left-[2%] md:left-[-4%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop">
                   <span className="font-hand text-accent text-base mr-1">Kay</span>
                   <span className="text-foreground/70">· baker</span>
                 </div>
-                <div className="absolute top-[14%] right-[2%] md:right-[-2%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop-right">
+                <div className="absolute top-[4%] right-[2%] md:right-[-4%] bg-card border border-border rounded-full px-4 py-1.5 text-xs font-medium shadow-[var(--shadow-card)] animate-tag-pop-right">
                   <span className="font-hand text-accent text-base mr-1">Kayla</span>
                   <span className="text-foreground/70">· chemist</span>
                 </div>
