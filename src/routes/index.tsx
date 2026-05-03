@@ -56,7 +56,7 @@ function Index() {
 
       {/* Why */}
       <section
-        className="relative text-primary [overflow-x:clip]"
+        className="relative z-10 text-primary overflow-visible max-w-full"
         style={{
           background:
             "radial-gradient(ellipse at top left, oklch(0.92 0.07 78) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.9 0.08 68) 0%, transparent 65%), linear-gradient(180deg, oklch(0.93 0.05 78), oklch(0.91 0.06 72))",
@@ -67,15 +67,17 @@ function Index() {
           <path fill="currentColor" d="M0,0 L1200,0 L1200,30 C1000,60 800,10 600,30 C400,50 200,5 0,35 Z" />
         </svg>
         {/* Floating bakery doodles — allowed to drift across section edges */}
-        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -top-10 -left-4 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
-        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-10 -right-4 w-16 md:w-24 opacity-90 animate-drift-b z-10" />
-        <img src={doughBlob} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-6 -left-6 w-14 md:w-20 opacity-70 animate-drift-c z-10" />
-        <img src={wheatSprig} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -bottom-10 -right-6 w-20 md:w-28 opacity-80 animate-drift-a z-10" />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/3 left-8 w-10 md:w-14 opacity-70 animate-bubble-rise" style={{ animationDelay: "0s" }} />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute top-1/2 right-12 w-8 md:w-12 opacity-70 animate-bubble-rise" style={{ animationDelay: "2s" }} />
-        <img src={bubbleImg} alt="" aria-hidden="true" className="pointer-events-none select-none absolute bottom-20 left-1/3 w-6 md:w-10 opacity-70 animate-bubble-rise" style={{ animationDelay: "4s" }} />
+        <div className="pointer-events-none absolute inset-0 z-20 select-none [clip-path:inset(-160px_0_-160px_0)] md:[clip-path:inset(-200px_0_-200px_0)]">
+          <img src={doughBlob} alt="" aria-hidden="true" className="absolute -top-12 left-1 w-20 opacity-80 animate-drift-a md:-top-16 md:left-6 md:w-28" />
+          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -top-1 right-8 w-16 opacity-90 animate-drift-b md:-top-4 md:right-12 md:w-24" />
+          <img src={doughBlob} alt="" aria-hidden="true" className="absolute bottom-6 left-0 w-14 opacity-70 animate-drift-c md:-left-2 md:w-20" />
+          <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -bottom-14 right-8 w-20 opacity-80 animate-drift-a md:-bottom-20 md:right-12 md:w-28" />
+          <img src={bubbleImg} alt="" aria-hidden="true" className="absolute top-1/3 left-8 w-10 opacity-70 animate-bubble-rise md:w-14" style={{ animationDelay: "0s" }} />
+          <img src={bubbleImg} alt="" aria-hidden="true" className="absolute top-1/2 right-12 w-8 opacity-70 animate-bubble-rise md:w-12" style={{ animationDelay: "2s" }} />
+          <img src={bubbleImg} alt="" aria-hidden="true" className="absolute bottom-20 left-1/3 w-6 opacity-70 animate-bubble-rise md:w-10" style={{ animationDelay: "4s" }} />
+        </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
+        <div className="relative z-30 max-w-6xl mx-auto px-6 py-20 md:py-24 text-center">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-tight text-primary">
             Tough on dough. <br className="sm:hidden" />
             <em className="font-hand text-accent text-5xl md:text-7xl lg:text-8xl">Gentle</em> on hands.
