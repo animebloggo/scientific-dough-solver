@@ -1,68 +1,35 @@
-# 12-Post Instagram Grid Mural — Dissolve My Dough
+## The problem
 
-Build a **4 columns × 3 rows** grid of 12 individual 1080×1080 square posts that, when viewed together on the Instagram profile, form one continuous warm bakery-paper "mural" telling the brand story. Each post also reads on its own in the feed.
+Instagram changed the profile grid from square (1:1) to **portrait (4:5)** in 2024. Your tiles were exported at 1080×1080 squares, so on the live profile Instagram is **center-cropping the left and right edges off** every tile.
 
-## How the grid reads on profile
+That's why your screenshot shows:
+- "It's gluten" cut to "It's gluter"
+- "Dough doesn't rinse" shifted and the right edge clipped
+- The honey ribbon and doodles no longer line up across seams
 
-Instagram profile grids show newest post top-left, so posts must be **uploaded in reverse** (post 12 first, post 1 last). The narrative below is written in **viewing order** (top-left → bottom-right).
+The `grid-preview.png` mockup looks perfect because it assumes square tiles — but the live Instagram grid will never render them as squares again.
 
-```text
- [01 COVER ]  [02 PROBLEM]  [03 INSIGHT]  [04 SHIFT  ]
- [05 BOTTLE]  [06 STEP 1 ]  [07 STEP 2 ]  [08 STEP 3 ]
- [09 NOT   ]  [10 FOUNDER]  [11 OAKLAND]  [12 CTA    ]
-```
+## The fix
 
-Each row is a chapter:
-- **Row 1 — The why**: hook → the sticky problem → the science insight → the shift in approach
-- **Row 2 — The product**: hero bottle (spans visually as the centerpiece) → 3-step how-it-works
-- **Row 3 — The trust**: what it isn't → founders Kay & Kayla → made in Oakland → CTA
+Re-generate all 12 tiles at **1080×1350 (4:5 portrait)** so what you see on the profile grid matches the mural mockup. Square posts in the feed still work — Instagram will letterbox or you can publish as 4:5 and the full image shows in feed too.
 
-## Visual continuity (what makes it a "mural")
+### Steps
 
-- **Shared cream paper background** flows edge-to-edge across all 12 tiles — kraft texture, subtle paper grain, hand-drawn flour smudges crossing tile borders
-- **A single honey-mustard "ribbon" accent** sweeps diagonally from tile 02 → 07 → 11, tying the rows together
-- **Hand-drawn bakery doodles** (whisk, flour puff, water droplet, dough ball, sourdough loaf) placed so a few cross tile seams
-- **Founders' photo on tile 10** anchors the bottom row as the human moment
-- **Logo wordmark on tile 12** as the final sign-off
+1. **Update the tile spec** in `.lovable/plan.md` from 1080×1080 to 1080×1350.
+2. **Re-generate all 12 tiles** (`ig-grid-01.png` … `ig-grid-12.png`) at 1080×1350, keeping the same warm bakery-paper composition, fonts, doodles, and honey ribbon — just on a taller canvas with the headline/visual recomposed so nothing is near the left/right safe edges.
+3. **Re-use the existing photo assets** for tile 05 (product) and tile 10 (founders) — same swap as before, just placed on the new portrait canvas.
+4. **Re-build `grid-preview.png`** as a 4×3 mockup of the new portrait tiles so the preview matches what Instagram will actually show.
+5. **Re-export** to both `src/assets/` and `/mnt/documents/instagram-grid/`.
+6. **Refresh `UPLOAD-ORDER.txt`** — same reverse order (12 → 1), but add a one-line note: *"Publish each post as 4:5 portrait (don't crop to square in the IG composer) so the grid lands exactly like the preview."*
+7. **QA**: assemble the new preview, visually inspect every tile for: text safely inside a ~80px horizontal margin, doodles aligning across vertical seams, honey ribbon flowing cleanly across tiles 02 → 07 → 11, founders' faces clear on tile 10, product label readable on tile 05.
 
-## Content per tile (viewing order)
+### Posting instructions you'll need
 
-| # | Headline | Sub / Detail | Visual |
-|---|----------|--------------|--------|
-| 01 | "Dough doesn't rinse." | small Caveat: "so we fixed that" | flour-puff doodle, sticky-note tag |
-| 02 | — | Caveat note: "ever scrubbed a whisk for 20 minutes?" | photo-style illustration of crusty whisk |
-| 03 | "It's gluten + starch." | Inter caption: "water alone can't break it down" | small diagram doodle |
-| 04 | "So we made something gentler." | — | honey ribbon sweep |
-| 05 | — | "DISSOLVE MY DOUGH" label | hero bottle photo, centered |
-| 06 | "01  Spray" | "on dried-on dough" | spray-bottle doodle |
-| 07 | "02  Wait" | "5–10 minutes" | hourglass / clock doodle |
-| 08 | "03  Rinse" | "warm water, gone" | water-droplet doodle |
-| 09 | "No bleach. No fumes. No scrubbing." | — | three small crossed-out icons |
-| 10 | "Meet Kay & Kayla" | Caveat: "the bakers behind the bottle" | founders photo |
-| 11 | "Made in Oakland, CA" | "small batches, by hand" | sourdough loaf doodle, sticky-note |
-| 12 | "dissolvemydough.com" | Caveat: "try a bottle →" | logo wordmark, honey accent |
+- When uploading each image to Instagram, **do not tap the square crop button** — leave it at the original 4:5 aspect. The full tile will then show in both the feed and the grid.
+- Still post in **reverse order** (12 first, 01 last) so the grid lands top-left → bottom-right.
+- For the 3 tiles you already posted as squares: delete and re-upload them as 4:5 once the new versions are ready.
 
-## Brand system (locked)
+### Out of scope
 
-- **Palette**: cream `oklch(0.96 0.025 80)` background, kraft brown `oklch(0.42 0.06 55)` primary text, honey `oklch(0.7 0.13 70)` accent, soft kraft `oklch(0.55 0.07 60)` for doodles
-- **Fonts**: Fraunces (serif headlines), Inter (small body / labels), Caveat (handwritten accents)
-- **Voice**: calm, plain, gently scientific. No "lab", "engineered", "patent-pending"
-- **Motifs**: rounded corners, sticky-note tags, soft shadows, hand-drawn bakery doodles — no beakers / clinical imagery
-- **Assets reused**: existing `src/assets/founders.png` for tile 10, existing logo for tile 12
-
-## Deliverables
-
-- 12 PNG files at 1080×1080: `ig-grid-01.png` … `ig-grid-12.png`
-- Saved to `src/assets/` and copied to `/mnt/documents/instagram-grid/`
-- A **`grid-preview.png`** mockup showing all 12 tiles assembled as the 4×3 profile grid so you can preview the mural before uploading
-- A short **`UPLOAD-ORDER.txt`** reminding you to post in reverse order (12 → 1) so the grid lands correctly
-
-## QA
-
-After generation, assemble the 4×3 mockup, visually inspect for: text overflow, doodles that don't line up across seams, founders photo readability at small size, contrast of honey on cream, and overall mural coherence. Iterate until the grid reads as one piece.
-
-## Out of scope (this round)
-
-- The 10-slide swipeable carousel (Option A) — can do as a follow-up
-- Reels covers / story templates
-- Captions copy for each post — can write after you approve the visuals
+- Captions (already delivered).
+- Reels covers / story templates.
