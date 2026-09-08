@@ -1,0 +1,9 @@
+# https://dissolvemydough.com
+User-agent: *
+Allow: /
+
+# Checkout and cart URLs carry session state and have no search value.
+Disallow: /cart
+Disallow: /checkout
+
+Sitemap: https://dissolvemydough.com/sitemap.xml

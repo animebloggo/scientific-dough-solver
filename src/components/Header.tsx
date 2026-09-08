@@ -19,6 +19,7 @@ export function Header() {
           <Link to="/" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }} activeOptions={{ exact: true }}>Home</Link>
           <Link to="/shop" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }}>Shop</Link>
           <Link to="/science" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }}>How It Works</Link>
+          <Link to="/blog" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }}>Journal</Link>
           <Link to="/about" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }}>About</Link>
         </nav>
         <CartDrawer />

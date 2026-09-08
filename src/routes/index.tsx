@@ -26,7 +26,7 @@ function Index() {
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-lg leading-relaxed">
               A gentle blend of plant enzymes that takes sticky dough off bowls, boards,
-              and hands — without scrubbing. Simple enough for home kitchens.
+              and hands, without scrubbing. Simple enough for home kitchens.
               Smart enough for people who care how things work.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -62,11 +62,11 @@ function Index() {
             "radial-gradient(ellipse at top left, oklch(0.92 0.07 78) 0%, transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.9 0.08 68) 0%, transparent 65%), linear-gradient(180deg, oklch(0.93 0.05 78), oklch(0.91 0.06 72))",
         }}
       >
-        {/* Top wave divider — matches hero (background) above */}
+        {/* Top wave divider, matches hero (background) above */}
         <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mb-px text-background" viewBox="0 0 1200 60" preserveAspectRatio="none">
           <path fill="currentColor" d="M0,0 L1200,0 L1200,30 C1000,60 800,10 600,30 C400,50 200,5 0,35 Z" />
         </svg>
-        {/* Floating bakery doodles — allowed to drift across section edges */}
+        {/* Floating bakery doodles, allowed to drift across section edges */}
         <div className="pointer-events-none absolute inset-0 z-20 select-none [clip-path:inset(-160px_0_-160px_0)] md:[clip-path:inset(-200px_0_-200px_0)]">
           <img src={doughBlob} alt="" aria-hidden="true" className="absolute -top-12 left-1 w-20 opacity-80 animate-drift-a md:-top-16 md:left-6 md:w-28" />
           <img src={wheatSprig} alt="" aria-hidden="true" className="absolute -top-1 right-8 w-16 opacity-90 animate-drift-b md:-top-4 md:right-12 md:w-24" />
@@ -104,7 +104,7 @@ function Index() {
             ))}
           </div>
         </div>
-        {/* Bottom wave divider — matches paper-texture (cream) below */}
+        {/* Bottom wave divider, matches paper-texture (cream) below */}
         <svg aria-hidden="true" className="block w-full h-8 md:h-12 -mt-px text-cream" viewBox="0 0 1200 60" preserveAspectRatio="none">
           <path fill="currentColor" d="M0,60 L1200,60 L1200,30 C1000,0 800,50 600,30 C400,10 200,55 0,25 Z" />
         </svg>
@@ -313,12 +313,12 @@ function Index() {
       {/* Sticky note CTA */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
         <div className="inline-block bg-cream border border-border rounded-lg px-10 py-12 shadow-[var(--shadow-card)] -rotate-1">
-          <div className="font-hand text-accent text-3xl">— a little note —</div>
+          <div className="font-hand text-accent text-3xl">a little note</div>
           <h2 className="mt-4 text-3xl md:text-4xl font-serif text-primary">
             Quietly considered. Honestly made.
           </h2>
           <p className="mt-4 text-foreground/75 max-w-xl mx-auto">
-            We test every batch and write down what we find. If you want the numbers, just ask — we'll send them.
+            We test every batch and write down what we find. If you want the numbers, just ask and we'll send them.
           </p>
           <Link to="/shop">
             <Button size="lg" className="mt-7 h-12 px-8 rounded-full">Try a bottle</Button>

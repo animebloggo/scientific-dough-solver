@@ -9,7 +9,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/product/$handle")({
   head: ({ params }) => ({
     meta: [
-      { title: `${params.handle.replace(/-/g, " ")} — Dissolve My Dough` },
+      { title: `${params.handle.replace(/-/g, " ")} | Dissolve My Dough` },
       { name: "description", content: "Lab-grade enzymatic dough cleaner. Patent-pending formulation." },
     ],
   }),
@@ -110,7 +110,7 @@ function ProductPage() {
           <div className="font-hand text-accent text-2xl">made by hand · Oakland</div>
           <h1 className="mt-1 text-4xl md:text-5xl font-serif text-primary">{product.title}</h1>
           <div className="mt-4 text-2xl font-mono">
-            {selected ? `${selected.price.currencyCode} ${parseFloat(selected.price.amount).toFixed(2)}` : "—"}
+            {selected ? `${selected.price.currencyCode} ${parseFloat(selected.price.amount).toFixed(2)}` : "n/a"}
           </div>
           <p className="mt-6 text-muted-foreground leading-relaxed whitespace-pre-line">{product.description}</p>
 

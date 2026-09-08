@@ -5,9 +5,9 @@ import moleculesImg from "@/assets/molecules.jpg";
 export const Route = createFileRoute("/science")({
   head: () => ({
     meta: [
-      { title: "The Science — Dissolve My Dough" },
+      { title: "The Science | Dissolve My Dough" },
       { name: "description", content: "How enzymatic hydrolysis dissolves starch and gluten bonds. White paper, mechanism of action, and lab data." },
-      { property: "og:title", content: "The Science — Dissolve My Dough" },
+      { property: "og:title", content: "The Science | Dissolve My Dough" },
       { property: "og:description", content: "The mechanism behind enzymatic dough removal." },
       { property: "og:image", content: "/og-science.jpg" },
     ],
@@ -26,7 +26,7 @@ function Science() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
             No drama, no harsh fumes. Just enzymes doing what they already do in your gut,
-            in your laundry, and in the bread you bake — gently breaking long molecules into shorter ones.
+            in your laundry, and in the bread you bake, gently breaking long molecules into shorter ones.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm font-mono text-muted-foreground">
             <span>Tested in real kitchens</span>
@@ -53,7 +53,7 @@ function Science() {
             <h2 className="mt-2 font-serif text-3xl">It's not you. It's the chemistry.</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               When flour meets water, the proteins link up into a stretchy network and the
-              starch swells into a sticky gel. That's wonderful for bread — and frustrating
+              starch swells into a sticky gel. That's wonderful for bread, and frustrating
               for whoever has to clean the bowl. Knowing this, we designed something that
               works with the dough instead of against it.
             </p>

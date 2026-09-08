@@ -24,13 +24,13 @@ export const CartDrawer = () => {
       const url = await ensureCheckoutUrl();
       if (!url) {
         toast.error("Your cart needs a refresh", {
-          description: "Please add your items again — the checkout link expired.",
+          description: "Please add your items again. The checkout link expired.",
         });
         return;
       }
       const opened = window.open(url, "_blank", "noopener,noreferrer");
       if (!opened) {
-        // Popup blocked — fall back to top-level navigation
+        // Popup blocked, fall back to top-level navigation
         window.location.href = url;
       }
       setIsOpen(false);

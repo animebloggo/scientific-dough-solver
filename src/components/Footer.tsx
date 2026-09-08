@@ -1,9 +1,17 @@
 import { Link } from "@tanstack/react-router";
 
+/** Cornerstone posts, linked site wide so they are one click from every page. */
+const FOOTER_POSTS = [
+  { slug: "what-is-after-dough", label: "How it works" },
+  { slug: "dough-dissolve-vs-after-dough", label: "Dough Dissolve vs After Dough" },
+  { slug: "how-to-dissolve-dough-stuck-to-everything", label: "How to dissolve dough" },
+  { slug: "dough-in-the-drain", label: "Dough in the drain" },
+];
+
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 lg:grid-cols-5 gap-10">
         <div className="md:col-span-2">
           <div className="font-serif text-2xl mb-2">Dissolve My Dough</div>
           <div className="font-hand text-accent text-xl mb-3">made with care in Oakland</div>
@@ -20,7 +28,20 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/shop" className="hover:text-accent">All Products</Link></li>
             <li><Link to="/science" className="hover:text-accent">How It Works</Link></li>
+            <li><Link to="/blog" className="hover:text-accent">Journal</Link></li>
             <li><Link to="/about" className="hover:text-accent">About</Link></li>
+          </ul>
+        </div>
+        <div>
+          <div className="text-xs tracking-[0.2em] uppercase font-semibold mb-4 text-primary-foreground/50">Read</div>
+          <ul className="space-y-2 text-sm">
+            {FOOTER_POSTS.map((post) => (
+              <li key={post.slug}>
+                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-accent">
+                  {post.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

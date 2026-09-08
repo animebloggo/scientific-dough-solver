@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Dissolve My Dough" },
+      { title: "About | Dissolve My Dough" },
       { name: "description", content: "We are a small team of chemists and bakers building lab-grade cleaning solutions for everyday kitchens." },
-      { property: "og:title", content: "About — Dissolve My Dough" },
+      { property: "og:title", content: "About | Dissolve My Dough" },
       { property: "og:description", content: "Chemists and bakers solving the dough problem." },
     ],
   }),
@@ -25,8 +25,8 @@ function About() {
         </p>
         <p>
           What came out is gentle on your hands, kind to your sink, and honest about what it does.
-          Each batch is mixed in small runs and checked the same way every time — for activity,
-          pH, and shelf life — before it gets a label.
+          Each batch is mixed in small runs and checked the same way every time, for activity,
+          pH, and shelf life, before it gets a label.
         </p>
         <p>
           We try to be straightforward. If you want to know what's in the bottle, where it's made,

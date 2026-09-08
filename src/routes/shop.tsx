@@ -4,9 +4,9 @@ import { ProductGrid } from "@/components/ProductGrid";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop — Dissolve My Dough" },
+      { title: "Shop | Dissolve My Dough" },
       { name: "description", content: "Browse all enzymatic dough cleaner formulations. Lab-tested, biodegradable, patent-pending." },
-      { property: "og:title", content: "Shop — Dissolve My Dough" },
+      { property: "og:title", content: "Shop | Dissolve My Dough" },
       { property: "og:description", content: "Lab-grade enzyme cleaners for kitchens." },
     ],
   }),
@@ -21,7 +21,7 @@ function Shop() {
         <h1 className="mt-2 text-5xl md:text-6xl font-serif text-primary">Pick a bottle.</h1>
         <p className="mt-4 text-foreground/70 max-w-xl mx-auto">
           Mixed in small batches, labeled by hand, and shipped with a note telling you
-          when it was made and what's inside. Nothing fancy — just done carefully.
+          when it was made and what's inside. Nothing fancy, just done carefully.
         </p>
       </div>
       <ProductGrid limit={24} />
